@@ -1,0 +1,54 @@
+<!-- 
+# App de calcular corrida #
+
+Preco base da corrida
+Custo fixo
+Horarios e regioes de maior movimento
+
+- distancia km
+- tempo min 
+-->
+
+<title>Calcule sua corrida</title>
+<h1>Calcule sua corrida</h1>
+
+<form id="formId">
+    <input id="distancia" placeholder="distancia (km)" />
+    <br><br>
+    <input id="tempo" placeholder="tempo (min)" />
+    <br><br>
+    <input type="submit" value="Calcular" />
+</form>
+
+<script>
+    var form = document.getElementById('formId');
+    form.addEventListener('submit', calcularCorrida);
+
+    function calcularCorrida(event) {
+        event.preventDefault();
+
+        var distancia = document.getElementById('distancia').value;
+        var tempo = document.getElementById('tempo').value;
+
+        if (distancia == '') {
+            alert('Distancia nao pode ser vazio');
+            return;
+        }
+        if (tempo == '') {
+            alert('Tempo nao pode ser vazio');
+            return;
+        }
+
+        var valorBase = 2;
+        var tarifaDinamica = 1.4;
+        var valorDistancia = distancia * tarifaDinamica;
+        var valorTempo = tempo * 0.26;
+        valorCorrida = valorBase + valorDistancia + valorTempo;
+
+        alert(formataParaReal(valorCorrida));
+    };
+
+    function formataParaReal(valor) {
+        return 'R$ ' + valor.toFixed(2).replace('.', ',');
+    }
+</script>
