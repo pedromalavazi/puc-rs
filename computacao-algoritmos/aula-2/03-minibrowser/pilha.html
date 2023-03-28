@@ -1,0 +1,34 @@
+<script>
+    console.log('Pilha/Stack');
+
+    class BrowseHistoryStack {
+        constructor() {
+            this.cursor = 0;
+            this.data = [];
+        }
+
+        stack(obj) {
+            this.data.push(obj);
+            this.cursor++;
+        }
+
+        pop() {
+            this.cursor--;
+        }
+
+        print() {
+            console.log(this.cursor);
+            console.log(this.data);
+        }
+    }
+
+    const history = new BrowseHistoryStack();
+    history.stack('google');
+    history.stack('youtube');
+    history.stack('orkut');
+    history.print();
+    console.log(history.pop());
+    history.print();
+
+
+</script>

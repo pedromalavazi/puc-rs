@@ -26,19 +26,19 @@
 
 <script>
     var aba1 = {
-        title: 'titulo uno',
+        title: 'Google',
         url: 'https://www.google.com'
     };
 
     var aba2 = {
-        title: 'titulo 2',
+        title: 'G-mail',
         url: 'https://www.gmail.com'
     };
 
     var abas = [aba1, aba2];
 
     for (var aba of abas) {
-        document.body.innerHTML += `<a href="${aba.url}">${aba.title}</a> <br>`;
+        document.body.innerHTML += `<li><a href="${aba.url}">${aba.title}</a></li>`;
     }
 
 </script>
