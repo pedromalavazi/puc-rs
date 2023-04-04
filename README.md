@@ -3,3 +3,4 @@ Projetos criados durante as aulas do curso Desenvolvimento Full-Stack da univers
    
 Professores:
     - Mario Souto
+    - Edson Ifarraguirre Moreno
